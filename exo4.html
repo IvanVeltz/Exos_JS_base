@@ -43,10 +43,22 @@
         .facebook, .twitter, .instagram{
             width: 200px;
             height: 200px;
-            display: flex;
             justify-content: center;
             align-items: center;
+            display: flex;
+            flex-direction: column;
+            color: white;
         }
+
+        p{
+            margin: 1em;
+        }
+
+        .hidden{
+            display: none
+        }
+
+        
 
         .facebook-color{
             background-color: rgb(69,90,153);
@@ -64,6 +76,23 @@
             color: white;
         }
 
+        .border-radius{
+            border: 1px solid white;
+            border-radius: 5%;
+        }
+
+        .shadow-fb{
+            box-shadow: rgb(69,90,153) 0px 0px;
+        }
+
+        .shadow-twitter{
+            box-shadow: rgb(76,173,241) 0px 0px;
+        }
+
+        .shadow-instagram{
+            box-shadow: rgba(212,47,107) 0px 0px;
+        }
+
         
         
     </style>
@@ -71,15 +100,18 @@
     <div class="container">
         <h2>Follow Us</h2>
         <div class="container-icon">
-            <figure class="facebook facebook-color">
+            <div class="icon facebook facebook-color">
                 <i class="fa-brands fa-facebook fa-5x facebook-icon"></i>
-            </figure>
-            <figure class="twitter twitter-color">
+                <p class="hidden">FACEBOOK</p>
+            </div>
+            <div class="icon twitter twitter-color">
                 <i class="fa-brands fa-twitter fa-5x twitter-icon"></i>
-            </figure>
-            <figure class="instagram instagram-color">
+                <p class="hidden">TWITTER</p>
+            </div>
+            <div class="icon instagram instagram-color">
                 <i class="fa-brands fa-instagram fa-5x instagram-icon"></i>
-            </figure>
+                <p class="hidden">INSTAGRAM</p>
+            </div>
         </div>
     </div>
 
