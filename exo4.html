@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Document</title>
+</head>
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 700px;
+            background-color: rgb(192,192,192);
+            padding-bottom: 30px;
+        }
+
+        h2{
+            color: white;
+            margin: 1em;
+        }
+
+        .container-icon{
+            display: flex;
+            gap: 10px;
+        }
+
+        .facebook, .twitter, .instagram{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .facebook-color{
+            background-color: rgb(69,90,153);
+        }
+
+        .twitter-color{
+            background-color: rgb(76,173,241);
+        }
+
+        .instagram-color{
+            background-color: rgba(212,47,107);
+        }
+
+        .facebook-icon, .twitter-icon, .instagram-icon {
+            color: white;
+        }
+
+        
+        
+    </style>
+
+    <div class="container">
+        <h2>Follow Us</h2>
+        <div class="container-icon">
+            <figure class="facebook facebook-color">
+                <i class="fa-brands fa-facebook fa-5x facebook-icon"></i>
+            </figure>
+            <figure class="twitter twitter-color">
+                <i class="fa-brands fa-twitter fa-5x twitter-icon"></i>
+            </figure>
+            <figure class="instagram instagram-color">
+                <i class="fa-brands fa-instagram fa-5x instagram-icon"></i>
+            </figure>
+        </div>
+    </div>
+
+    <script src="js/exo4.js"></script>
+</body>
+</html>
