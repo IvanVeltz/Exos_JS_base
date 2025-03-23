@@ -1,13 +1,13 @@
 const divIcons = document.querySelectorAll('.icon');
 const container = document.querySelector('.container');
 
-
 divIcons.forEach(divIcon =>{
     divIcon.addEventListener('click', ()=>{
         const classContainer = divIcon.classList[2]; 
         // Récupérer la troisième classe de l'icon(ex: facebook-color)
         const paragraphe = divIcon.querySelector('p');
         const color = window.getComputedStyle(divIcon).backgroundColor;
+
         if (container.classList.contains(classContainer)){
             container.classList.remove(classContainer);
             // Si la class est déja appliqué, on la supprime
@@ -15,10 +15,8 @@ divIcons.forEach(divIcon =>{
             // Et on masque le paragraphe
             divIcon.classList.remove('border-radius');
             // On enleve la class border-radius à la div
-
-            // 
-
-
+            divIcon.classList.remove("shadow-fb", "shadow-twitter", "shadow-instagram");
+            // On enleve l'ombre
         } else {
             container.classList.remove('facebook-color', 'twitter-color', 'instagram-color');
             // Sinon, On supprime les autres classes color
@@ -39,8 +37,24 @@ divIcons.forEach(divIcon =>{
             })
             paragraphe.classList.remove('hidden');
             // On enleve la classe qui masque le paragrpahe
-            window.getComputedStyle(divIcon).boxShadow = color;
+            divIcons.forEach(div =>{
+                div.classList.remove("shadow-fb", "shadow-twitter", "shadow-instagram");
+            })
+            
+            // On enleve l'ombre de toutes les icones
+            if (divIcon.classList.contains("facebook-color")) {
+                divIcon.classList.add("shadow-fb");
+            } else if (divIcon.classList.contains("twitter-color")) {
+                divIcon.classList.add("shadow-twitter");
+            } else if (divIcon.classList.contains("instagram-color")) {
+                divIcon.classList.add("shadow-instagram");
+            }
+            // On ajoute la bonne hombre à l'icon cliqué
+
         }
+
+        // Gestion des ombres 
+
     })
 })
 
