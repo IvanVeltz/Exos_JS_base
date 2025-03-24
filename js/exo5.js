@@ -36,5 +36,3 @@ for (let author in quotes) {
 
     nb++;
 }
-
-console.log(localStorage);
