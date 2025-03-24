@@ -1,9 +1,23 @@
-var quotesContainer = document.getElementById("quotes-container");
+const body = document.querySelector("body");
 
 // Générer les citations
-for (var author in quotes) {
-    var quoteElement = document.createElement("div");
-    quoteElement.innerHTML = `<blockquote>"${quotes[author]}"</blockquote><br><cite>${author}</cite>`;
+for (let author in quotes) {
+    let quoteElement = document.createElement("div");
+    quoteElement.innerHTML = `
+        <blockquote>"${quotes[author]}"</blockquote>
+        <br>
+        <cite>${author}</cite>
+        <button class="fav-button">Favori</button>
+    `;
 
-    quotesContainer.appendChild(quoteElement);
+    let favButton = document.querySelector('.fav-button');
+    // favButton.addEventListener('click', ()=>{
+    //     localStorage.setItem(author, quotes[author]);
+    // })
+
+
+
+    body.appendChild(quoteElement);
 }
+
+console.log(localStorage);

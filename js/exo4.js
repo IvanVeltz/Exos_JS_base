@@ -35,13 +35,15 @@ divIcons.forEach(divIcon =>{
                 p.classList.add('hidden');
                 // On masque tous les paragraphe
             })
+            
             paragraphe.classList.remove('hidden');
             // On enleve la classe qui masque le paragrpahe
+            
             divIcons.forEach(div =>{
                 div.classList.remove("shadow-fb", "shadow-twitter", "shadow-instagram");
             })
-            
             // On enleve l'ombre de toutes les icones
+            
             if (divIcon.classList.contains("facebook-color")) {
                 divIcon.classList.add("shadow-fb");
             } else if (divIcon.classList.contains("twitter-color")) {
@@ -52,9 +54,6 @@ divIcons.forEach(divIcon =>{
             // On ajoute la bonne hombre à l'icon cliqué
 
         }
-
-        // Gestion des ombres 
-
     })
 })
 
