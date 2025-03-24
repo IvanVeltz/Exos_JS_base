@@ -28,8 +28,8 @@ for (let author in quotes) {
         }
     })
 
+    // mettre en forme auchargement si la citation est dans le localStorage
     if (localStorage.getItem(author) !== null){
-        quoteElement.classList.add("favori");
         heart.classList.remove('fa-regular');
         heart.classList.add('fa-solid');
     }
