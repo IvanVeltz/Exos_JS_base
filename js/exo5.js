@@ -9,7 +9,7 @@ function getFavorites() {
 function saveFavorites(favs) {
     localStorage.setItem('favorites', JSON.stringify(favs));
 }
-console.log(quotes[[1]]);
+
 // Vérifie si un auteur est déjà en favori
 function isFavorite(index) {
     return getFavorites().includes(index);
@@ -48,7 +48,6 @@ function createQuote(author, quote, index) {
             heart.classList.add('fa-solid');
         }
         const fav = getFavorites();
-        console.log(fav);
     });
 
     wrapper.appendChild(text);
